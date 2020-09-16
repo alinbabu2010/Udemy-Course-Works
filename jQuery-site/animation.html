@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        #div {
+            background-color: #1a1c18;
+            height: 500px;
+            width: 750px;
+            position: absolute;
+            color: #fff
+        }
+    </style>
+    <title>jQuery Animation</title>
+</head>
+
+<body>
+    <button type="button" class="m-5 btn btn-danger btn-lg">Click to start animation.</button>
+    <div id="div">Welcome!</div>
+    <script src="scripts/jquery-3.5.1.js"></script>
+    <script>
+        /*global $,document */
+        $(document).ready(function() {
+            $('button').click(function() {
+                $('#div').animate({left: '200px'}, "slow");
+                $('#div').animate({fontSize: '5em'}, "slow");
+            });
+        });
+    </script>
+</body></html>
