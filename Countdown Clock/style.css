@@ -1,0 +1,44 @@
+body {
+    background-color: beige;
+    text-align: center;
+    align-items: center;
+}
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80px;
+    color: darkgreen;
+    margin-top: 100px;
+}
+#clockdiv {
+    margin-top: 50px;
+    display: inline-block;
+
+}
+#clockdiv > div {
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    background-color: green;
+    color: bisque;
+    display: inline-block;
+}
+#clockdiv > div span {
+    font-size: 120px;
+    margin: 30px;
+    padding: 30px;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    background-color: antiquewhite;
+    color: darkblue;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+}
+.smalltext {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
