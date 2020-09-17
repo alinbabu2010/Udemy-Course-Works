@@ -1,0 +1,22 @@
+[
+    {
+        "firstName": "Alex",
+        "lastNmae": "Johns"
+    },
+    {
+        "Staff": [
+            {
+                "firstName": "Alex",
+                "lastNmae": "Johns"
+            },
+            {
+                "firstName": "Alan",
+                "lastNmae": "Zyed"
+            },
+            {
+                "firstName": "Arun",
+                "lastNmae": "Kumar"
+            }
+        ]
+    }
+]
