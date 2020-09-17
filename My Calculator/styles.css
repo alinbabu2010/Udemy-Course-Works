@@ -1,0 +1,36 @@
+#display {
+   width: 670px;
+   border-radius: 20px;
+   background-color: rgb(34, 95, 207);
+   color: rgb(255, 255, 255);
+}
+input {
+    width: 150px;
+    height: 100px;
+    font-size: 75px;
+    margin: 10px;
+    background-color: rgb(129, 127, 127);
+    color: rgb(255, 255, 255);
+    border-style: none;
+    border-radius: 20px;
+}
+#myform {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#plus {
+    background-color: rgb(220, 20, 60);
+}
+#divide {
+    background-color: rgb(0, 100, 0) ;
+}
+#product {
+    background-color: rgb(255, 140, 0);
+}
+#minus {
+    background-color: rgb(75, 0, 130);
+}
