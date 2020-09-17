@@ -1,3 +1,4 @@
+// Function to calculate the remaining time
 function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
     var seconds = Math.floor((t / 1000) % 60);
@@ -13,13 +14,15 @@ function getTimeRemaining(endtime) {
     };
 }
 
-function intializeClock(id, endtime) {
+// Function to intialize the clock 
+function intializeClock(id, endtime) {     
     var clock = document.getElementById(id);
     var daysSpan = clock.querySelector('.days');
     var hoursSpan = clock.querySelector('.hours');
     var minutesSpan = clock.querySelector('.minutes');
     var secondsSpan = clock.querySelector('.seconds');
 
+    //Function to update the clock
     function updateClock() {
         var t = getTimeRemaining(endtime);
 
