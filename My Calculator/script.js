@@ -4,13 +4,20 @@ $(document).ready(function () {
     'use strict';
     $("input.button").on('click', function () {
         var value = $(this).val();
-        $("#display").val($("#display").val() + value);
+        if (value == $("#divide").val()) {
+            value = '/';
+        } else if (value == $("#minus").val()) {
+            value = '-';
+        } else if (value == $("#product").val()) {
+            value = '*';
+        }
+        $("#display").val(calc.display.value + value);
     });
     $("input[value='C']").on("click", function () {
         $("#display").val(" ");
     });
     $('#equal').on("click", function () {
-        var result = eval($("#display").val());
-        $("#display").val(result).show();
+        var result = eval(calc.display.value);
+        $("#display").val(result);
     });
 });
