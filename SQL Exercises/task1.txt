@@ -55,24 +55,24 @@ INSERT INTO purchase VALUES(
 /* Fetch all products under a category */
 SELECT * FROM products WHERE category_name='Soap';
 
-/*Fetch sum of price of all products under a category*/
+/*Fetch sum of price of all products under a category */
 SELECT SUM(price) FROM products WHERE category_name='Soap';
 
-/*Fetch total amount purchased by a user*/
+/*Fetch total amount purchased by a user */
 SELECT user_id,SUM(total_price) FROM purchase GROUP BY user_id;
 SELECT SUM(total_price) FROM purchase WHERE user_id=103;
 
-/*Fetch all purchases after a specific date*/
+/* Fetch all purchases after a specific date */
 SELECT * FROM purchase WHERE purchase_date > '05-Mar-2020';
 
-/*Most selled category.*/
+/* Most selled category. */
 SELECT  s.category_name FROM products s  JOIN purchase u ON s.product_id=u.product_id GROUP BY s.category_name ORDER BY SUM(u.quantity) DESC LIMIT 1;
 
-/*Find the Customer who brought most products in each category.*/
+/* Find the Customer who brought most products in each category. */
 SELECT user_name,category_name FROM purchase  NATURAL JOIN products NATURAL JOIN users GROUP BY user_name,category_name ORDER BY SUM(quantity) DESC;
 
-/*Find the Customer who brought for maximum amount in a specific date range*/
+/* Find the Customer who brought for maximum amount in a specific date range*/
 SELECT user_name FROM purchase NATURAL JOIN users WHERE total_price IN (SELECT MAX(total_price) FROM purchase WHERE purchase_date BETWEEN '01-Mar-2020' AND '31-Mar-2020');
 
-/*Find the purchase details of a user on a specific date*/
+/* Find the purchase details of a user on a specific date */
 SELECT * FROM purchase NATURAL JOIN users WHERE purchase_date='12-Feb-2020' AND user_id='102';
