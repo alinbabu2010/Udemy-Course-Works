@@ -68,13 +68,20 @@ SELECT SUM(p.total_price) AS "Total amount" FROM purchases p JOIN users u ON p.u
 SELECT p.name AS "Product",s.quantity,s.total_price,s.purchase_date FROM purchases s NATURAL JOIN products p WHERE purchase_date > '05-Mar-2020';
 
 /* Most selled category. */
-SELECT  name AS "Category name" FROM categories WHERE id IN(SELECT s.category_id FROM products s  JOIN purchases u ON s.id=u.product_id GROUP BY s.category_id ORDER BY SUM(u.quantity) DESC LIMIT 1);
+SELECT  name AS "Category name" FROM categories WHERE id 
+IN (SELECT s.category_id FROM products s  JOIN purchases u ON s.id=u.product_id GROUP BY s.category_id ORDER BY SUM(u.quantity) DESC LIMIT 1);
 
 /* Find the Customer who brought most products in each category. */
-SELECT u.name AS "Username",c.name AS "Category" FROM (products p JOIN categories c ON p.category_id=c.id) JOIN (purchases s JOIN users u ON u.id=s.user_id) ON p.id=s.product_id GROUP BY u.name,c.name ORDER BY SUM(quantity) DESC;
+SELECT u.name AS "Username",c.name AS "Category" 
+FROM (products p JOIN categories c ON p.category_id=c.id) 
+JOIN (purchases s JOIN users u ON u.id=s.user_id) ON p.id=s.product_id 
+GROUP BY u.name,c.name ORDER BY SUM(quantity) DESC;
 
 /* Find the Customer who brought for maximum amount in a specific date range*/
-SELECT u.name AS "Username" FROM users u JOIN purchases p ON p.user_id=u.id WHERE total_price IN (SELECT MAX(total_price) FROM purchases WHERE purchase_date BETWEEN '01-Mar-2020' AND '31-Mar-2020');
+SELECT u.name AS "Username" FROM users u JOIN purchases p ON p.user_id=u.id 
+WHERE total_price 
+IN (SELECT MAX(total_price) FROM purchases WHERE purchase_date BETWEEN '01-Mar-2020' AND '31-Mar-2020');
 
 /* Find the purchase details of a user on a specific date */
-SELECT u.name AS "Username" ,quantity, total_price, purchase_date FROM purchases p JOIN users u ON p.user_id=u.id WHERE purchase_date='12-Feb-2020' AND user_id='2';
+SELECT u.name AS "Username" ,quantity, total_price, purchase_date FROM purchases p JOIN users u ON p.user_id=u.id 
+WHERE purchase_date='12-Feb-2020' AND user_id='2';
