@@ -4,9 +4,7 @@
 print(len("Hello"))
 print(len([20, 40, 80]))
 
-# polymorphism in unction
-
-
+# polymorphism in function
 def addNumbers(a, b, c=1):
     return a + b + c
 
@@ -15,8 +13,6 @@ print(addNumbers(8, 9))
 print(addNumbers(8, 9, 4))
 
 # Polymorphism using class
-
-
 class UK():
     def capitalCity(self):
         print("London is the capital of UK")
