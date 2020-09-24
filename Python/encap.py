@@ -25,7 +25,7 @@ toyota = Cars(350, "Blue")
 ford.setSpeed(450)
 ford.setColor("Brown")
 
-# Below teo lines have no effect because speed and color are private.
+# Below two lines have no effect because speed and color are private.
 ford.speed = 500
 ford.color = "Pink"
 
