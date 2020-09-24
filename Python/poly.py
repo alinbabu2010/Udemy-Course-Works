@@ -8,7 +8,6 @@ print(len([20, 40, 80]))
 def addNumbers(a, b, c=1):
     return a + b + c
 
-
 print(addNumbers(8, 9))
 print(addNumbers(8, 9, 4))
 
@@ -42,8 +41,6 @@ for country in (queen, zara):
     print("\n")
 
 # Creatimg polymorphism by using exisitng methods on a new function
-
-
 def Europe(eu):
     eu.capitalCity()
 
