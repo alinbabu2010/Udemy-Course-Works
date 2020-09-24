@@ -3,8 +3,8 @@ import salute
 from salute import fruits
 import random
 import platform
-#import healthy.foo
 from healthy import foo
+
 salute.say_hello("Ben")
 print(fruits["name"])
 
