@@ -1,5 +1,5 @@
 # Calculator program in Python
-from operations import add,sub,div,multi
+from .operations import add,sub,div,multi
 
 while(1):
     try:
